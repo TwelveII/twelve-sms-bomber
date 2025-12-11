@@ -61,6 +61,3 @@ pip install -r requirements.txt
 
 # then run
 py main.py
-
-
-
