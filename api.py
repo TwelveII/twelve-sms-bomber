@@ -1,6 +1,5 @@
 def send_otp_requests(number):
     url_payload_map = {
-        # ... your existing entries ...
         'komodaa': ('https://api.komodaa.com/api/v2.6/loginRC/request', {"phone_number": '0' + number}),
         'janebi': ('https://janebi.com/signin?do', {'resend': '0' + number}),
         '4hair': ('https://4hair.ir/user/login.php', {'num': '0' + number, 'ok': ''}),
@@ -233,7 +232,6 @@ def send_otp_requests(number):
             'input': '0' + number
         }),
 
-        # ============ NEW ADDITIONS - TRANSPORTATION ============
         'alopeyk': ('https://api.alopeyk.com/api/v2/login', {
             'type': 'CUSTOMER',
             'model': 'Chrome',
@@ -259,7 +257,6 @@ def send_otp_requests(number):
             'CellPhone': '0' + number
         }),
 
-        # ============ NEW ADDITIONS - FOOD DELIVERY ============
         'snappfood': ('https://snappfood.ir/mobile/v2/user/loginMobileWithNoPass', {
             'cellphone': '0' + number,
             'optionalClient': 'WEBSITE',
@@ -279,7 +276,6 @@ def send_otp_requests(number):
             'mobile': '0' + number
         }),
 
-        # ============ NEW ADDITIONS - E-COMMERCE ============
         'digikala_alt': ('https://api.digikala.com/v1/user/authenticate', {
             'username': '0' + number
         }),
@@ -299,7 +295,6 @@ def send_otp_requests(number):
             'phone_number': '0' + number
         }),
 
-        # ============ NEW ADDITIONS - SOCIAL & MESSAGING ============
         'rubika': ('https://messengerg2c4.iranlms.ir/', {
             'api_version': '3',
             'method': 'sendCode',
@@ -325,7 +320,6 @@ def send_otp_requests(number):
             'flow': ''
         }),
 
-        # ============ NEW ADDITIONS - FINANCIAL & PAYMENT ============
         'digipay': ('https://app.mydigipay.com/digipay/api/users/send-sms', {
             'cellNumber': '0' + number,
             'device': {
@@ -353,7 +347,6 @@ def send_otp_requests(number):
             'side': 'web'
         }),
 
-        # ============ NEW ADDITIONS - ENTERTAINMENT & MEDIA ============
         'filmnet': ('https://api-v2.filmnet.ir/access-token/users/{}/otp'.format('0' + number), None),
         'namava_alt': ('https://www.namava.ir/api/v1.0/accounts/registrations/by-phone/request', {
             'UserName': '0' + number
@@ -372,7 +365,6 @@ def send_otp_requests(number):
             'SourceChannel': 'GF_WebSite'
         }),
 
-        # ============ NEW ADDITIONS - HEALTH & MEDICAL ============
         'pezeshket': ('https://api.pezeshket.com/core/v1/auth/requestCode', {
             'mobileNumber': '0' + number
         }),
@@ -385,7 +377,6 @@ def send_otp_requests(number):
             'userType': 'PATIENT'
         }),
 
-        # ============ NEW ADDITIONS - REAL ESTATE ============
         'kilid': ('https://server.kilid.com/global_auth_api/v1.0/authenticate/login/realm/otp/start', {
             'mobile': '0' + number,
             'realm': 'PORTAL'
@@ -394,7 +385,6 @@ def send_otp_requests(number):
             'phone': number
         }),
 
-        # ============ NEW ADDITIONS - EDUCATION ============
         'classino': ('https://nx.classino.com/otp/v1/api/login', {
             'mobile': '0' + number
         }),
@@ -404,7 +394,6 @@ def send_otp_requests(number):
             'referrer_id': None
         }),
 
-        # ============ NEW ADDITIONS - TELECOM ============
         'mci': ('https://api-ebcom.mci.ir/services/auth/v1.0/otp', {
             'msisdn': number
         }),
@@ -412,7 +401,6 @@ def send_otp_requests(number):
             'msisdn': number
         }),
 
-        # ============ NEW ADDITIONS - AUTOMOTIVE ============
         'khodro45': ('https://khodro45.com/api/v1/customers/otp', {
             'mobile': '0' + number
         }),
@@ -420,7 +408,6 @@ def send_otp_requests(number):
             'mobileNumber': '0' + number
         }),
 
-        # ============ NEW ADDITIONS - TRAVEL ============
         'flightio': ('https://app.flightio.com/bff/Authentication/CheckUserKey', {
             'userKey': '98-' + number,
             'userKeyType': 1
@@ -436,7 +423,6 @@ def send_otp_requests(number):
             'provider_code': 'RUBIKA'
         }),
 
-        # ============ NEW ADDITIONS - UTILITIES ============
         'azki': ('https://www.azki.com/api/core/app/user/checkLoginAvailability', {
             'phoneNumber': 'azki_0' + number
         }),
@@ -448,7 +434,6 @@ def send_otp_requests(number):
             'phoneNumber': '0' + number
         }),
 
-        # ============ NEW ADDITIONS - SPECIALIZED SERVICES ============
         'digify': ('https://apollo.digify.shop/graphql', {
             'operationName': 'Mutation',
             'variables': {
@@ -477,7 +462,6 @@ def send_otp_requests(number):
     return list(url_payload_map.values())
 
 
-# _______________JSON DATA LINK API ___________________________
 def send_otp_requests_json(number):
     url2_payload2_map = {
         'eaccount': ('https://eaccount.ir/api/v1/sessions/login_request', {"mobile_phone": "0" + number + ""}),
@@ -492,7 +476,6 @@ def send_otp_requests_json(number):
         'dreamlandshop': ('https://dreamlandshop.ir/api/v1/sessions/login_request',
                           {"mobile_phone": "0" + number + ""}),
 
-        # ============ NEW JSON API ADDITIONS ============
         'deniizshop': ('https://deniizshop.com/api/v1/sessions/login_request', {"mobile_phone": "0" + number}),
         'farvi': ('https://farvi.shop/api/v1/sessions/login_request', {"mobile_phone": "0" + number}),
         'takshopaccessorise': ('https://takshopaccessorise.ir/api/v1/sessions/login_request',
@@ -529,5 +512,6 @@ def send_otp_requests_json(number):
             }"""
         }),
     }
+
 
     return list(url2_payload2_map.values())
