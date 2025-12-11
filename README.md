@@ -40,7 +40,9 @@ By using this code, **you accept full responsibility** for any actions taken.
 ## 🚀 Features
 
 Modern Tkinter User Interface
+
 Randomized Delay Support
+
 Logging System
 
 ---
