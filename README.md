@@ -5,7 +5,7 @@
 ---
 
 ## 📄 Overview  
-TweLve SMS BOMBERs, Can help you prank friends and family!!!!!
+TweLve SMS Bomber, Can help you prank friends and family!!!!!
 ---
 
 ## ⚠️ Legal Disclaimer (English)
